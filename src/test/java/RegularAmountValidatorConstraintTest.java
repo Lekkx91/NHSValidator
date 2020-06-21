@@ -64,7 +64,7 @@ public class RegularAmountValidatorConstraintTest {
     }
 
     @Test
-    public void ifAmountIsNotEvenlyDivisibleByFrequencyThereShouldBeNoError() {
+    public void ifAmountIsNotEvenlyDivisibleByFrequencyThereShouldBeError() {
         RegularAmount regularAmount = new RegularAmount("201", Frequency.TWO_WEEK);
         Set<ConstraintViolation<RegularAmount>> constraintViolations =
                 validator.validate(regularAmount);
